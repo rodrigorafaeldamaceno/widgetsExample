@@ -13,6 +13,8 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primarySwatch: Colors.teal,
+        primaryColor: Colors.teal,
+        // brightness: Brightness.dark,
       ),
       home: HomePage(),
     );
