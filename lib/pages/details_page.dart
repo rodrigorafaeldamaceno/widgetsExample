@@ -14,19 +14,20 @@ class Detailspage extends StatelessWidget {
         title: Text(user.name),
       ),
       body: SingleChildScrollView(
-          child: Column(
-        children: <Widget>[
-          Hero(
-            tag: heroTag,
-            child: Center(
-              child: Image.asset(
-                user.image,
-                height: MediaQuery.of(context).size.width * 0.5,
+        child: Column(
+          children: <Widget>[
+            Hero(
+              tag: heroTag,
+              child: Center(
+                child: Image.asset(
+                  user.image,
+                  height: MediaQuery.of(context).size.width * 0.5,
+                ),
               ),
             ),
-          ),
-        ],
-      )),
+          ],
+        ),
+      ),
     );
   }
 }

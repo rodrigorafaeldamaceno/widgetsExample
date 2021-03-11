@@ -6,7 +6,7 @@ class ExpansileTileListPage extends StatelessWidget {
     return Scaffold(
       body: SingleChildScrollView(
         child: Container(
-          padding: EdgeInsets.all(20),
+          padding: EdgeInsets.symmetric(vertical: 20),
           child: Column(
             children: <Widget>[
               Text(
