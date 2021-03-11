@@ -22,39 +22,40 @@ class _ListPageState extends State<ListPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body: SingleChildScrollView(
-      child: Column(
-        children: <Widget>[
-          ListView.builder(
-            itemCount: 10,
-            shrinkWrap: true,
-            itemBuilder: (BuildContext context, int index) {
-              return ListTile(
-                title: Text(users.first.name),
-                leading: Hero(
-                  tag: index,
-                  child: CircleAvatar(
-                    backgroundImage: AssetImage(users.first.image),
-                  ),
-                ),
-                subtitle: Text(users.first.title),
-                trailing: Text(users.first.dateTime),
-                onTap: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => Detailspage(
-                        heroTag: index,
-                        user: users.first,
-                      ),
+      body: SingleChildScrollView(
+        child: Column(
+          children: <Widget>[
+            ListView.builder(
+              itemCount: 10,
+              shrinkWrap: true,
+              itemBuilder: (BuildContext context, int index) {
+                return ListTile(
+                  title: Text(users.first.name),
+                  leading: Hero(
+                    tag: index,
+                    child: CircleAvatar(
+                      backgroundImage: AssetImage(users.first.image),
                     ),
-                  );
-                },
-              );
-            },
-          ),
-        ],
+                  ),
+                  subtitle: Text(users.first.title),
+                  trailing: Text(users.first.dateTime),
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => Detailspage(
+                          heroTag: index,
+                          user: users.first,
+                        ),
+                      ),
+                    );
+                  },
+                );
+              },
+            ),
+          ],
+        ),
       ),
-    ));
+    );
   }
 }
